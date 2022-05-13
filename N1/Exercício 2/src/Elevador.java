@@ -1,52 +1,67 @@
-import java.util.ArrayList;
-
 public class Elevador {
+    private int andar,lugares,mudar;
 
-    private ArrayList<Pessoa> pessoas;
-    private int totalAndar = 0;
-
-    public ArrayList<Pessoa> getPessoas() {
-        return pessoas;
+    public int getAndar() {
+        return andar;
     }
 
-    public void setPessoas(ArrayList<Pessoa> pessoas) {
-        this.pessoas = pessoas;
+    public void setAndar(int andar) {
+        this.andar = andar;
     }
 
-    public int getTotalAndar() {
-        return totalAndar;
+    public int getLugares() {
+        return lugares;
     }
 
-    public void setTotalAndar(int totalAndar) {
-        this.totalAndar = totalAndar;
+    public void setLugares(int lugares) {
+        this.lugares = lugares;
     }
 
-    public Elevador() {
-        this.pessoas = new ArrayList<Pessoa>();
+    public int getMudar() {
+        return mudar;
     }
 
-    public void inicia() {
-        int totalAndar = 0;
-
+    public void setMudar(int mudar) {
+        this.mudar = mudar;
     }
 
-    public void entra() {
-        if (this.pessoas.size() < 10) {
-            this.pessoas.add(new Pessoa());
+    public void Inicializa(){
+        andar = 0;
+        lugares = 0;
+    }
+
+    public void Entra(){
+        if(lugares <= 9 && lugares >= 0) {
+            lugares++;
+        }else{
+            System.out.println("Numero Máximo alcançado");
         }
     }
 
-    public void sai() {
-        if (this.pessoas.size() > 0) {
-            this.pessoas.remove(pessoas.size() - 1);
+    public void Sai(){
+        if(lugares <= 9 && lugares >= 0) {
+           lugares--;
+        }else{
+            System.out.println("Elevador vazio");
         }
     }
 
-    public void sobe(int totalAndar) {
+    public int Sobe(int mudar) {
+        if (mudar+andar <= 13 && mudar+andar >= 0) {
+            return andar += mudar;
+        } else {
+            System.out.println("Topo prédio atingido");
+            return andar = 13;
 
+        }
     }
 
-    public void desce(int totalAndar) {
-
+    public int Desce(int mudar) {
+        if (mudar+andar < 13 && mudar+andar >= 0) {
+            return andar -= mudar;
+        } else{
+            System.out.println("Térreo");
+            return andar = 0;
+        }
     }
 }
