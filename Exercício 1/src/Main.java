@@ -13,7 +13,9 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
+
         Agenda ag = new Agenda();
+
         boolean finalizar = false;
 
         do {
@@ -38,12 +40,14 @@ public class Main {
 
                     ag.armazenarPessoa(nome, idade, altura);
                     System.out.println("Nova pessoa adicionada com sucesso!");
+
                     break;
                 case 2:
                     System.out.print("Digite o nome da pessoa a ser deletada: ");
                     nome = leitor.readLine();
 
                     ag.removePessoa(nome);
+
                     break;
                 case 3:
                     ag.imprimeAgenda();
@@ -53,15 +57,17 @@ public class Main {
                     index = Integer.parseInt(leitor.readLine());
 
                     ag.imprimePessoa(index);
+
                     break;
                 case 0:
                     finalizar = true;
+
                     break;
                 default:
                     System.out.println("Opção inválida, digite novamente.");
+
                     break;
             }
-            System.out.flush();
         } while (!finalizar);
     }
 
@@ -73,7 +79,7 @@ public class Main {
     public static void desenhaMenu(int qtdeContatos) {
         System.out.println("----------- Agenda Telefônica ----------");
         System.out.println("Você possui " + qtdeContatos + " contatos");
-        System.out.println("Opções disponíveis: \n1. Armazenar Contato\n2. Remover contato\n3. Mostrar agenda\n4. Mostrar contato\n0. Sair");
+        System.out.println("Opções disponíveis: \n1. Armazenar Contato\n2. Remover contato\n3. Mostrar agenda\n4. Mostrar contato\n0. Encerrar programa");
         System.out.print("Selecione a opção: ");
     }
 }
