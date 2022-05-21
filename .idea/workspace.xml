@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="" />
+    <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 1/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 1/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/src/Pessoa.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +65,7 @@
       <recent name="C:\Users\bemor\IdeaProjects\N1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Ex1">
     <configuration name="Ex1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
@@ -101,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652474990161</updated>
       <workItem from="1652495173122" duration="622000" />
+      <workItem from="1653158707333" duration="5426000" />
     </task>
     <servers />
   </component>
