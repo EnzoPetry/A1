@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercício 2/src/Elevador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 2/src/Elevador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercício 2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 2/src/Main.java" afterDir="false" />
     </list>
@@ -108,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652474990161</updated>
       <workItem from="1652495173122" duration="622000" />
-      <workItem from="1653158707333" duration="9907000" />
+      <workItem from="1653158707333" duration="11532000" />
     </task>
     <servers />
   </component>

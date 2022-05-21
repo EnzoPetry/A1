@@ -3,8 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * A classe Agenda gerencia e armazena pessoas
- * em uma agenda.
+ * A classe Main executa o programa de gerenciamento de agenda
  *
  * @author Bernardo Moreira e Enzo Petry
  * @version 1.0

@@ -3,8 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * A classe Agenda gerencia e armazena pessoas
- * em uma agenda.
+ * A classe Main executa o programa de gerenciamento de elevador
  *
  * @author Bernardo Moreira e Enzo Petry
  * @version 1.0
@@ -56,6 +55,14 @@ public class Main {
 
     }
 
+    /**
+     * Desenha o menu e as opções disponíveis para seleção
+     *
+     * @param capacidadeAtual capacidade atual do elevador, quantas pessoas estão nele
+     * @param capacidadeTotal capacidade máxima suportada pelo elevador
+     * @param andarAtual andar atual em que o elevador se encontra
+     * @param andarTotal andar máximo do prédio
+     */
     public static void desenhaMenu(int capacidadeAtual, int capacidadeTotal, int andarAtual, int andarTotal) {
         System.out.println("----------- Sistema Elevador ----------");
         System.out.println("Existem " + capacidadeAtual + " pessoa(s) no elevador (" + capacidadeAtual + "/" + capacidadeTotal + ")");
