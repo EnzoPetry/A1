@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 2/src/Elevador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 2/src/Elevador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 3/src/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/src/Studant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -63,7 +64,7 @@
       <recent name="C:\Users\bemor\IdeaProjects\N1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Ex1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
@@ -74,6 +75,13 @@
     <configuration name="Ex2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Exercício 3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,9 +97,11 @@
       <item itemvalue="Application.Ex1" />
       <item itemvalue="Application.Ex2" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -105,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652474990161</updated>
       <workItem from="1652495173122" duration="622000" />
-      <workItem from="1653158707333" duration="11532000" />
+      <workItem from="1653158707333" duration="14186000" />
     </task>
     <servers />
   </component>
