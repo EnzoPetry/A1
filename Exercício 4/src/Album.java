@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -35,17 +36,32 @@ public class Album {
         this.musicas = musicas;
     }
 
-    public void addMusica(String nomeMusica, float duracao, String genero) {
+    public void addMusica(String nomeMusica, float duracao) {
         Musica musica = new Musica();
 
         musica.setNomeMusica(nomeMusica);
         musica.setDuracao(duracao);
-        musica.setGenero(genero);
 
         this.musicas.add(musica);
     }
 
     public void removeMusica(int indice) {
         this.musicas.remove(indice);
+    }
+
+    @Override
+    public String toString() {
+        String musicaString = "";
+
+        for (int i = 0; i < this.getMusicas().size(); i++) {
+            musicaString += this.getMusicas().get(i).toString(i + 1) + "\n";
+        }
+
+        return "-> Álbum: "
+                + this.getNomeAlbum()
+                + " | Data de lançamento: "
+                + new SimpleDateFormat("dd/MM/yyyy").format(this.getDataLancamento())
+                + "\n"
+                + musicaString;
     }
 }

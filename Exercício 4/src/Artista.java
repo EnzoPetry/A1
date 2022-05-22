@@ -47,4 +47,18 @@ public class Artista {
             return this.discografia.get(indice);
         }
     }
+
+    @Override
+    public String toString() {
+        String albumString = "";
+
+        for (int i = 0; i < this.getDiscografia().size(); i++) {
+            albumString += this.getDiscografia().get(i) + "\n";
+        }
+
+        return "Nome artista: "
+                + this.getNomeArtista()
+                + "\n"
+                + albumString;
+    }
 }

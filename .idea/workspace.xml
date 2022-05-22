@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 3/src/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/src/Studant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Musica.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exercício 1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exercício 6" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -52,11 +54,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bemor\IdeaProjects\N1\Exercício 6" />
       <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 1" />
       <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 2" />
       <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 3" />
       <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 4" />
-      <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 6\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alu202115758\Downloads\PortableGit\N1\Exercício 6" />
@@ -64,7 +66,7 @@
       <recent name="C:\Users\bemor\IdeaProjects\N1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Ex1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
@@ -86,6 +88,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Exercício 4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 2" />
@@ -98,9 +107,11 @@
       <item itemvalue="Application.Ex2" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -115,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652474990161</updated>
       <workItem from="1652495173122" duration="622000" />
-      <workItem from="1653158707333" duration="14186000" />
+      <workItem from="1653158707333" duration="22900000" />
     </task>
     <servers />
   </component>
