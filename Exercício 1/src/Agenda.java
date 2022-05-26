@@ -144,7 +144,7 @@ public class Agenda {
 
             System.out.println(dadosPessoa);
         } catch (IndexOutOfBoundsException exception) {
-            System.out.println("Índice inválido, tente novamente!");
+            System.out.println("Pessoa com índice " + (index + 1) + " não encontrada!");
         }
     }
 }

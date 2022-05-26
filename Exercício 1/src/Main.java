@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.ParseException;
 
 /**
  * A classe Main executa o programa de gerenciamento de agenda
@@ -20,42 +21,89 @@ public class Main {
         do {
             Main.desenhaMenu(ag.getPessoas().size());
 
-            String nome;
+            String nome = "";
             int idade, index, opcaoMenu;
-            float altura;
+            idade = index = opcaoMenu = 0;
 
-            opcaoMenu = Integer.parseInt(leitor.readLine());
+            float altura = 0;
+
+            try {
+                opcaoMenu = Integer.parseInt(leitor.readLine());
+            } catch (NumberFormatException e) {
+                opcaoMenu = -1;
+            }
 
             switch (opcaoMenu) {
                 case 1:
-                    System.out.print("Digite um nome: ");
-                    nome = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Digite um nome: ");
+                            nome = leitor.readLine();
 
-                    System.out.print("Digite a idade: ");
-                    idade = Integer.parseInt(leitor.readLine());
+                            if (nome.length() < 1) {
+                                throw new Exception();
+                            }
 
-                    System.out.print("Digite a altura (ex: 1.70): ");
-                    altura = Float.parseFloat(leitor.readLine());
+                            System.out.print("Digite a idade: ");
+                            idade = Integer.parseInt(leitor.readLine());
+
+                            if (idade <= 0 || idade > 150) {
+                                throw new Exception();
+                            }
+
+                            System.out.print("Digite a altura (ex: 1.70): ");
+                            altura = Float.parseFloat(leitor.readLine());
+
+                            if (altura <= 0 || altura > 3) {
+                                throw new Exception();
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
 
                     ag.armazenarPessoa(nome, idade, altura);
                     System.out.println("Nova pessoa adicionada com sucesso!");
 
                     break;
                 case 2:
-                    System.out.print("Digite o nome da pessoa a ser deletada: ");
-                    nome = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Digite o nome da pessoa a ser deletada: ");
+                            nome = leitor.readLine();
 
-                    ag.removePessoa(nome);
+                            if (nome.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            ag.removePessoa(nome);
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
 
                     break;
                 case 3:
                     ag.imprimeAgenda();
                     break;
                 case 4:
-                    System.out.print("Digite o índice da pessoa: ");
-                    index = Integer.parseInt(leitor.readLine());
+                    do {
+                        try {
+                            System.out.print("Digite o índice da pessoa: ");
 
-                    ag.imprimePessoa(index);
+                            index = Integer.parseInt(leitor.readLine());
+
+                            ag.imprimePessoa(index);
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
 
                     break;
                 case 0:

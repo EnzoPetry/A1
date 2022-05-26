@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 5/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 5/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 6/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 6/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 6/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 6/src/Program.java" afterDir="false" />
-    </list>
+    <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exercício 6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -66,7 +59,7 @@
       <recent name="C:\Users\bemor\IdeaProjects\N1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Ex1">
     <configuration name="Ex1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
