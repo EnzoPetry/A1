@@ -18,18 +18,58 @@ public class Main {
         boolean finalizar = false;
 
         System.out.println("----------- Sistema Elevador ----------");
-        System.out.print("Informe a capadidade máxima do elevador: ");
-        int capacidadeTota = Integer.parseInt(leitor.readLine());
 
-        System.out.print("Informe a quantidade máxima de andares: ");
-        int andarTotal = Integer.parseInt(leitor.readLine());
+        int capacidadeTota, andarTotal;
+        capacidadeTota = andarTotal = 0;
+
+        do {
+            try {
+                System.out.print("Informe a capadidade máxima do elevador: ");
+
+                capacidadeTota = Integer.parseInt(leitor.readLine());
+
+                if (capacidadeTota <= 0) {
+                    throw new Exception();
+                }
+
+                break;
+            } catch (Exception e) {
+                System.out.println("Por favor, digite uma capacidade válida.");
+            }
+        } while (true);
+
+        do {
+            try {
+                System.out.print("Informe a quantidade máxima de andares: ");
+
+                andarTotal = Integer.parseInt(leitor.readLine());
+
+                if (andarTotal <= 0) {
+                    throw new Exception();
+                }
+
+                break;
+            } catch (Exception e) {
+                System.out.println("Por favor, digite uma quantidade válida.");
+            }
+        } while (true);
 
         ele.inicializa(capacidadeTota, andarTotal);
 
         do {
-            Main.desenhaMenu(ele.getCapacidadeAtual(), ele.getCapacidadeTotal(), ele.getAndarAtual(), ele.getAndarTotal());
+            int opcaoMenu = 0;
 
-            int opcaoMenu = Integer.parseInt(leitor.readLine());
+            do {
+                try {
+                    Main.desenhaMenu(ele.getCapacidadeAtual(), ele.getCapacidadeTotal(), ele.getAndarAtual(), ele.getAndarTotal());
+
+                    opcaoMenu = Integer.parseInt(leitor.readLine());
+
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Por favor, digite valores válidos.");
+                }
+            } while (true);
 
             switch (opcaoMenu) {
                 case 1:
@@ -60,8 +100,8 @@ public class Main {
      *
      * @param capacidadeAtual capacidade atual do elevador, quantas pessoas estão nele
      * @param capacidadeTotal capacidade máxima suportada pelo elevador
-     * @param andarAtual andar atual em que o elevador se encontra
-     * @param andarTotal andar máximo do prédio
+     * @param andarAtual      andar atual em que o elevador se encontra
+     * @param andarTotal      andar máximo do prédio
      */
     public static void desenhaMenu(int capacidadeAtual, int capacidadeTotal, int andarAtual, int andarTotal) {
         System.out.println("----------- Sistema Elevador ----------");
