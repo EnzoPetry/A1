@@ -18,12 +18,38 @@ public class Main {
 
         System.out.println("----------- Notas Escolares ----------");
 
-        System.out.print("Digite seu nome: ");
-        aluno.setNome(leitor.readLine());
+        do {
+            try {
+                System.out.print("Digite seu nome: ");
+
+                aluno.setNome(leitor.readLine());
+
+                if (aluno.getNome().length() < 1) {
+                    throw new Exception();
+                }
+
+                break;
+            } catch (Exception e) {
+                System.out.println("Por favor, digite um nome válido.");
+            }
+        } while (true);
 
         for (int i = 0; i < 3; i++) {
-            System.out.print("Nota trimestre " + (i + 1) + ": ");
-            aluno.setNota(i, Float.parseFloat(leitor.readLine()));
+            do {
+                try {
+                    System.out.print("Nota trimestre " + (i + 1) + " (Ex.: 7.8): ");
+
+                    aluno.setNota(i, Float.parseFloat(leitor.readLine()));
+
+                    if (aluno.getNota()[i] < 0) {
+                        throw new Exception();
+                    }
+
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Por favor, digite uma nota válida.");
+                }
+            } while (true);
         }
 
         aluno.calculaMediaFinal();
