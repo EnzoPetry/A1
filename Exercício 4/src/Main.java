@@ -21,26 +21,53 @@ public class Main {
 
             Date dataLancamento;
 
-            int opcaoMenu, indiceArtista, indiceAlbum, indiceMusica;
+            int opcaoMenu, indiceArtista, indiceAlbum;
+            opcaoMenu = indiceArtista = indiceAlbum = 0;
 
             float duracaoMusica = 0;
-            opcaoMenu = Integer.parseInt(leitor.readLine());
+
+            do {
+                try {
+                    opcaoMenu = Integer.parseInt(leitor.readLine());
+
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Por favor, digite valores válidos.");
+                }
+            } while (true);
 
             switch (opcaoMenu) {
                 // Cadastra um artista
                 case 1:
-                    System.out.print("Digite o nome do novo artista: ");
-                    nomeArtista = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Digite o nome do novo artista: ");
+                            nomeArtista = leitor.readLine();
 
-                    biblioteca.addArtista(nomeArtista);
+                            if (nomeArtista.length() < 1) {
+                                throw new Exception();
+                            }
 
-                    System.out.println("Artista adicionado com sucesso!");
+                            biblioteca.addArtista(nomeArtista);
+
+                            System.out.println("Artista adicionado com sucesso!");
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
+
                     break;
                 // Cadastra um álbum
                 case 2:
                     try {
                         System.out.print("Digite o nome do artista: ");
                         nomeArtista = leitor.readLine();
+
+                        if (nomeArtista.length() < 1) {
+                            throw new Exception();
+                        }
 
                         indiceArtista = biblioteca.buscaArtista(nomeArtista);
 
@@ -59,57 +86,97 @@ public class Main {
                     } catch (ParseException e) {
                         System.out.println("Não foi possível cadastrar o álbum: formato da data é inválido.");
                     } catch (Exception e) {
-                        System.out.println("Não foi possível cadastrar o álbum, tente novamente.");
+                        System.out.println("Não foi possível cadastrar o álbum, verifique os dados informados.");
                     }
+
                     break;
                 // Cadastra uma música
                 case 3:
-                    System.out.print("Digite o nome do artista: ");
-                    nomeArtista = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Digite o nome do artista: ");
+                            nomeArtista = leitor.readLine();
 
-                    indiceArtista = biblioteca.buscaArtista(nomeArtista);
+                            if (nomeArtista.length() < 1) {
+                                throw new Exception();
+                            }
 
-                    if (indiceArtista >= 0) {
-                        System.out.print("Digite o nome do novo álbum: ");
-                        nomeAlbum = leitor.readLine();
+                            indiceArtista = biblioteca.buscaArtista(nomeArtista);
 
-                        indiceAlbum = biblioteca.buscaAlbum(nomeAlbum, indiceArtista);
+                            if (indiceArtista >= 0) {
+                                System.out.print("Digite o nome do novo álbum: ");
+                                nomeAlbum = leitor.readLine();
 
-                        if (indiceAlbum >= 0) {
-                            System.out.print("Digite o nome da música: ");
-                            nomeMusica = leitor.readLine();
+                                if (nomeAlbum.length() < 1) {
+                                    throw new Exception();
+                                }
 
-                            System.out.print("Digite a duração da música (em segundos): ");
-                            duracaoMusica = Float.parseFloat(leitor.readLine());
+                                indiceAlbum = biblioteca.buscaAlbum(nomeAlbum, indiceArtista);
 
-                            biblioteca.addMusica(indiceArtista, indiceAlbum, nomeMusica, duracaoMusica);
+                                if (indiceAlbum >= 0) {
+                                    System.out.print("Digite o nome da música: ");
+                                    nomeMusica = leitor.readLine();
 
-                            System.out.println("Música adicionada com sucesso!");
-                        } else {
-                            System.out.println("Não foi possível cadastrar a música: álbum não encontrado.");
+                                    if (nomeMusica.length() < 1) {
+                                        throw new Exception();
+                                    }
+
+                                    System.out.print("Digite a duração da música (em segundos): ");
+                                    duracaoMusica = Float.parseFloat(leitor.readLine());
+
+                                    if (duracaoMusica <= 0) {
+                                        throw new Exception();
+                                    }
+
+                                    biblioteca.addMusica(indiceArtista, indiceAlbum, nomeMusica, duracaoMusica);
+
+                                    System.out.println("Música adicionada com sucesso!");
+                                } else {
+                                    System.out.println("Não foi possível cadastrar a música: álbum não encontrado.");
+                                }
+                            } else {
+                                System.out.println("Não foi possível cadastrar a música: artista não encontrado.");
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um valores válidos.");
                         }
-                    } else {
-                        System.out.println("Não foi possível cadastrar a música: artista não encontrado.");
-                    }
+                    } while (true);
+
                     break;
                 // Visualiza o artista
                 case 4:
-                    System.out.print("Digite o nome do artista: ");
-                    nomeArtista = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Digite o nome do artista: ");
+                            nomeArtista = leitor.readLine();
 
-                    indiceArtista = biblioteca.buscaArtista(nomeArtista);
+                            if (nomeArtista.length() < 1) {
+                                throw new Exception();
+                            }
 
-                    if (indiceArtista >= 0) {
-                        System.out.print(biblioteca.getListaArtista().get(indiceArtista));
-                    } else {
-                        System.out.println("Artista não encontrado.");
-                    }
+                            indiceArtista = biblioteca.buscaArtista(nomeArtista);
+
+                            if (indiceArtista >= 0) {
+                                System.out.print(biblioteca.getListaArtista().get(indiceArtista));
+                            } else {
+                                System.out.println("Artista não encontrado.");
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um valores válidos.");
+                        }
+                    } while (true);
 
                     break;
                 // Apaga lista
                 case 5:
                     biblioteca.setListaArtista(new ArrayList<Artista>());
+
                     System.out.println("Lista de artistas apagada.");
+                    
                     break;
                 // Lista todos os artistas, álbums e músicas
                 case 6:
