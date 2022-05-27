@@ -29,10 +29,9 @@ public class Editora {
 
     @Override
     public String toString() {
-        return "Editora{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Editora:\n" +
+                "\tid: " + id + "\n" +
+                "\tNome: " + nome + "\n" +
+                "\tEmail: " + email;
     }
 }

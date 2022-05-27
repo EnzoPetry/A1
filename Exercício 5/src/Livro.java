@@ -1,8 +1,12 @@
 public class Livro {
     private String titulo;
     private String autor;
-    private int idEditora;
     private int ano;
+    private final long idEditora;
+
+    public Livro(long idEditora) {
+        this.idEditora = idEditora;
+    }
 
     public int getAno() {
         return ano;
@@ -30,11 +34,10 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", idEditora=" + idEditora +
-                ", ano=" + ano +
-                '}';
+        return "Livro:\n" +
+                "\tTítulo: " + titulo + "\n" +
+                "\tAutor: " + autor + "\n" +
+                "\tidEditora: " + idEditora + "\n" +
+                "\tAno: " + ano;
     }
 }

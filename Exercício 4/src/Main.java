@@ -176,7 +176,7 @@ public class Main {
                     biblioteca.setListaArtista(new ArrayList<Artista>());
 
                     System.out.println("Lista de artistas apagada.");
-                    
+
                     break;
                 // Lista todos os artistas, álbums e músicas
                 case 6:
