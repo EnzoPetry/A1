@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Endereco {
-    private String logradouro;
+
+    private String logradouro ;
     private String complemento;
     private int numero;
     private String cep;
@@ -36,12 +39,16 @@ public class Endereco {
         this.cep = cep;
     }
 
+    public void armazenarEndereco(String logradouro,int numero,String complemento,String cep) {
+
+        this.setLogradouro(logradouro);
+        this.setNumero(numero);
+        this.setComplemento(complemento);
+        this.setCep(cep);
+    }
+
     @Override
     public String toString() {
-        return "Endereco:\n" +
-                "Logradouro:" + logradouro + "\n" +
-                "Complemento: " + complemento + "\n" +
-                "Numero: " + numero + "\n" +
-                "CEP: " + cep;
+        return  logradouro + " " + numero + ", " + complemento + " - " + cep + "\n";
     }
 }
