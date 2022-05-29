@@ -71,22 +71,6 @@ public class Endereco {
         this.cep = cep;
     }
 
-    /**
-     * Adiciona um novo endereço.
-     *
-     * @param logradouro logradouro do endereço a ser adicionado
-     * @param numero  numero do endereço a ser adicionado
-     * @param complemento complemento do endereço a ser adicionado
-     * @param cep  cep do endereço a ser adicionado
-     */
-    public void armazenarEndereco(String logradouro,int numero,String complemento,String cep) {
-
-        this.setLogradouro(logradouro);
-        this.setNumero(numero);
-        this.setComplemento(complemento);
-        this.setCep(cep);
-    }
-
     @Override
     public String toString() {
         return  logradouro + " " + numero + ", " + complemento + " - " + cep + "\n";

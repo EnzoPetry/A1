@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 /**
  * @author Bernardo Moreira e Enzo Petry
@@ -11,68 +12,224 @@ public class Program {
 
         BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
 
-        Pessoa p1 = new Pessoa();
-
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        boolean finalizar = false;
 
         do {
             String nome, logradouro, complemento, cep;
             int idade, opcaoMenu, numero;
+            boolean encontrouPessoa = false;
             char sexo;
 
-            Program.desenhaMenu(p1.pessoas.size());
 
-            opcaoMenu = Integer.parseInt(leitor.readLine());
+            Program.desenhaMenu(pessoas.size());
+
+            do {
+                try {
+                    opcaoMenu = Integer.parseInt(leitor.readLine());
+
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Por favor, digite valores válidos.");
+                }
+            } while (true);
+
             switch (opcaoMenu) {
                 case 0:
-                    System.exit(0);
+                    finalizar = true;
+
                     break;
 
                 case 1:
-                    System.out.println("Nome: ");
-                    nome = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Nome: ");
+                            nome = leitor.readLine();
 
-                    System.out.println("Idade: ");
-                    idade = Integer.parseInt(leitor.readLine());
+                            if (nome.length() < 1) {
+                                throw new Exception();
+                            }
 
-                    System.out.println("Sexo (Ex: h ou m): ");
-                    sexo = leitor.readLine().charAt(0);
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um nome válido.");
+                        }
+                    } while (true);
 
-                    System.out.println("Digite a sua rua:");
-                    logradouro = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Idade: ");
+                            idade = Integer.parseInt(leitor.readLine());
 
-                    System.out.println("Digite o numero: ");
-                    numero = Integer.parseInt(leitor.readLine());
+                            if (idade <= 0) {
+                                throw new Exception();
+                            }
 
-                    System.out.println("Digite o complemento: ");
-                    complemento = leitor.readLine();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite uma idade válida.");
+                        }
+                    } while (true);
 
-                    System.out.println("Digite o CEP: ");
-                    cep = leitor.readLine();
+                    do {
+                        try {
+                            System.out.print("Sexo (Ex: H ou M): ");
+                            sexo = leitor.readLine().charAt(0);
 
-                    p1.armazenarPessoa(nome, idade, sexo, logradouro, numero, complemento, cep);
+                            if (sexo != 'H' && sexo != 'M') {
+                                throw new Exception();
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
+
+                    Pessoa p = new Pessoa(nome, idade, sexo);
+
+                    do {
+                        try {
+                            System.out.print("Digite a sua rua: ");
+                            logradouro = leitor.readLine();
+
+                            if (logradouro.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um endereço válido.");
+                        }
+                    } while (true);
+
+                    do {
+                        try {
+                            System.out.print("Digite o numero: ");
+                            numero = Integer.parseInt(leitor.readLine());
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um número válido.");
+                        }
+                    } while (true);
+
+                    do {
+                        try {
+                            System.out.print("Digite o complemento: ");
+                            complemento = leitor.readLine();
+
+                            if (complemento.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
+
+                    do {
+                        try {
+                            System.out.print("Digite o CEP: ");
+                            cep = leitor.readLine();
+
+                            if (cep.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite valores válidos.");
+                        }
+                    } while (true);
+
+                    Endereco end = new Endereco();
+
+                    end.setLogradouro(logradouro);
+                    end.setComplemento(complemento);
+                    end.setNumero(numero);
+                    end.setCep(cep);
+
+                    p.setEnd(end);
+
+                    pessoas.add(p);
 
                     break;
+
                 case 2:
-                    System.out.println("Qual nome quer apagar: ");
-                    nome = leitor.readLine();
-                    p1.removePessoa(nome);
+                    do {
+                        try {
+                            System.out.print("Digite o nome da pessoa a ser apagada: ");
+                            nome = leitor.readLine();
+
+                            if (nome.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            for (int i = 0; i < pessoas.size(); i++) {
+                                if (pessoas.get(i).getNome().equals(nome)) {
+                                    pessoas.remove(i);
+
+                                    encontrouPessoa = true;
+
+                                    System.out.println("Pessoa deletada com sucesso!");
+                                }
+                            }
+
+                            if (!encontrouPessoa) {
+                                System.out.println("Registro não encontrado.");
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um nome válido.");
+                        }
+                    } while (true);
+
                     break;
+
                 case 3:
-                    System.out.println("Qual o usuário: ");
-                    nome = leitor.readLine();
-                    System.out.println(p1.pessoas.get(p1.buscaPessoa(nome)).toString());
+                    do {
+                        try {
+                            System.out.print("Digite o nome da pessoa a ser exibido: ");
+                            nome = leitor.readLine();
+
+                            if (nome.length() < 1) {
+                                throw new Exception();
+                            }
+
+                            for (Pessoa pessoa : pessoas) {
+                                if (pessoa.getNome().equals(nome)) {
+                                    System.out.println(pessoa);
+                                    encontrouPessoa = true;
+                                }
+                            }
+
+                            if (!encontrouPessoa) {
+                                System.out.println("Registro não encontrado.");
+                            }
+
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Por favor, digite um nome válido.");
+                        }
+                    } while (true);
+
                     break;
+
                 case 4:
-                    for (int x = 0; x < p1.pessoas.size(); x++) {
-                        String dadosPessoa = "=> " + (x + 1) + "ºCadastro " + "\n" + p1.pessoas.get(x).toString();
-                        System.out.println(dadosPessoa);
+                    for (Pessoa pessoa : pessoas) {
+                        System.out.println(pessoa);
                     }
+
                     break;
+
                 default:
                     System.out.println("Opcao Invalida digite novamente");
                     break;
             }
-        } while (true);
+        } while (!finalizar);
     }
 
     /**

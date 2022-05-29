@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92afb121-508f-4967-a128-89f2f359849d" name="Changes" comment="Exercício 6 Arrumado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 1/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 1/src/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Artista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 4/src/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 4/src/Musica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 5/src/Editora.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 5/src/Editora.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 5/src/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 5/src/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercício 5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 5/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 6/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 6/src/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercício 6/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/Exercício 6/src/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
       <recent name="C:\Users\bemor\IdeaProjects\N1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Program">
     <configuration name="Ex1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Exercício 1" />
@@ -135,9 +129,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Program" />
         <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Program" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
