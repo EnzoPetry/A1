@@ -11,7 +11,6 @@ import java.util.Calendar;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
-
         Editora editora = new Editora();
 
         // Armazena o nome da editora
@@ -108,4 +107,13 @@ public class Main {
         System.out.println(editora);
         System.out.println(livro);
     }
+
+    /** @deprecated
+     * public static void desenhaMenu(int qtEditora, int qtLivros) {
+     * System.out.println("----------- Livraria ----------");
+     * System.out.println("Atualmente temos " + qtEditora + "editoras e " + qtLivros + " livros");
+     * System.out.println("Opções disponíveis: \n1. Armazenar Contato\n2. Remover contato\n3. Mostrar agenda\n4. Mostrar contato\n0. Encerrar programa");
+     * System.out.print("Selecione a opção: ");
+     * }
+     */
 }

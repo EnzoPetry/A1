@@ -1,6 +1,11 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * @author Bernardo Moreira e Enzo Petry
+ * @version 1.0
+ * @since 26/05/2022
+ */
 public class Program {
     public static void main(String[] args) throws Exception {
 
