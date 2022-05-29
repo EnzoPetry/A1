@@ -18,9 +18,7 @@ public class Pessoa {
         return this.nome;
     }
 
-    /**
-     * @return a idade da pessoa
-     */
+
     public int getIdade() {
         return this.idade;
     }

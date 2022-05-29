@@ -12,18 +12,34 @@ public class Album {
         this.musicas = new ArrayList<>();
     }
 
+    /**
+     * @return o nome do album
+     */
     public String getNomeAlbum() {
         return nomeAlbum;
     }
 
+    /**
+     * Altera o nome do album
+     *
+     * @param nomeAlbum nome do album
+     */
     public void setNomeAlbum(String nomeAlbum) {
         this.nomeAlbum = nomeAlbum;
     }
 
+    /**
+     * @return a data de lancamento do album
+     */
     public Date getDataLancamento() {
         return dataLancamento;
     }
 
+    /**
+     * Altera a data de lançamento do album
+     *
+     * @param dataLancamento data de lançamento do album
+     */
     public void setDataLancamento(Date dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
@@ -36,6 +52,12 @@ public class Album {
         this.musicas = musicas;
     }
 
+    /**
+     * Adiciona uma nova musica ao album.
+     *
+     * @param nomeMusica nome da musica a ser adicionada no album
+     * @param duracao    duracao da musica a ser adicionada no album
+     */
     public void addMusica(String nomeMusica, float duracao) {
         Musica musica = new Musica();
 
@@ -45,6 +67,11 @@ public class Album {
         this.musicas.add(musica);
     }
 
+    /**
+     * Remove uma musica do album.
+     *
+     * @param indice indice da musica a ser removida do album
+     */
     public void removeMusica(int indice) {
         this.musicas.remove(indice);
     }

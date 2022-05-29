@@ -10,10 +10,18 @@ public class Artista {
         this.discografia = new ArrayList<>();
     }
 
+    /**
+     * @return o nome do artista
+     */
     public String getNomeArtista() {
         return nomeArtista;
     }
 
+    /**
+     * Altera o nome do artista
+     *
+     * @param nomeArtista nome do artista
+     */
     public void setNomeArtista(String nomeArtista) {
         this.nomeArtista = nomeArtista;
     }
@@ -26,6 +34,12 @@ public class Artista {
         this.discografia = discografia;
     }
 
+    /**
+     * Adiciona um novo album ao artista.
+     *
+     * @param nomeAlbum      nome do album do artista
+     * @param dataLancamento data de lancamento do album do artista
+     */
     public void addAlbum(String nomeAlbum, Date dataLancamento) {
         Album album = new Album();
 
@@ -35,10 +49,21 @@ public class Artista {
         this.discografia.add(album);
     }
 
+    /**
+     * Remove um album do artista.
+     *
+     * @param indice indice da musica a ser removida do album
+     */
     public void removeAlbum(int indice) {
         this.discografia.remove(indice);
     }
 
+    /**
+     * Busca por um indice de um album, se ele existe retorna o proprio indice
+     *
+     * @param indice indice do album
+     * @return indice indice do album
+     */
     public Album buscaAlbum(int indice) {
         if (this.discografia.size() < indice || indice < 0) {
             System.out.println("Erro");

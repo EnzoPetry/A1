@@ -11,7 +11,6 @@ import java.util.Calendar;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
-
         Editora editora = new Editora();
 
         // Armazena o nome da editora
