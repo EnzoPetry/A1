@@ -9,31 +9,41 @@ public class Program {
         Pessoa p1 = new Pessoa();
 
 
-
         do {
-            String nome,logradouro,complemento,cep;
-            int idade, opcaoMenu,numero;
+            String nome, logradouro, complemento, cep;
+            int idade, opcaoMenu, numero;
             char sexo;
 
             Program.desenhaMenu(p1.pessoas.size());
 
             opcaoMenu = Integer.parseInt(leitor.readLine());
             switch (opcaoMenu) {
+                case 0:
+                    System.exit(0);
+                    break;
+
                 case 1:
                     System.out.println("Nome: ");
                     nome = leitor.readLine();
+
                     System.out.println("Idade: ");
                     idade = Integer.parseInt(leitor.readLine());
+
                     System.out.println("Sexo (Ex: h ou m): ");
                     sexo = leitor.readLine().charAt(0);
+
                     System.out.println("Digite a sua rua:");
                     logradouro = leitor.readLine();
+
                     System.out.println("Digite o numero: ");
                     numero = Integer.parseInt(leitor.readLine());
+
                     System.out.println("Digite o complemento: ");
                     complemento = leitor.readLine();
+
                     System.out.println("Digite o CEP: ");
                     cep = leitor.readLine();
+
                     p1.armazenarPessoa(nome, idade, sexo, logradouro, numero, complemento, cep);
 
                     break;
@@ -53,11 +63,18 @@ public class Program {
                         System.out.println(dadosPessoa);
                     }
                     break;
-
+                default:
+                    System.out.println("Opcao Invalida digite novamente");
+                    break;
             }
         } while (true);
     }
 
+    /**
+     * Desenha o menu e as opções disponíveis para seleção
+     *
+     * @param cadastros informa a quantidade cadastros
+     */
     public static void desenhaMenu(int cadastros) {
         System.out.println("----------- Cadastro de Usuário ----------");
         System.out.println("Você possui " + cadastros + " cadastros");
